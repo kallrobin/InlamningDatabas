@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="webshop@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="webshop">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="auctiondb"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sys"/>
+    <table id="8" parent="2" name="categories"/>
+    <table id="9" parent="2" name="customers"/>
+    <table id="10" parent="2" name="instock"/>
+    <table id="11" parent="2" name="orderrows"/>
+    <table id="12" parent="2" name="outofstock"/>
+    <table id="13" parent="2" name="productcategories"/>
+    <table id="14" parent="2" name="productorders"/>
+    <table id="15" parent="2" name="products"/>
+    <view id="16" parent="2" name="bestmonth">
+      <Comment>VIEW</Comment>
+    </view>
+    <view id="17" parent="2" name="bluenudie32">
+      <Comment>VIEW</Comment>
+    </view>
+    <view id="18" parent="2" name="customerorderlist">
+      <Comment>VIEW</Comment>
+    </view>
+    <view id="19" parent="2" name="orderabove1kcity">
+      <Comment>VIEW</Comment>
+    </view>
+    <view id="20" parent="2" name="productspercategory">
+      <Comment>VIEW</Comment>
+    </view>
+    <view id="21" parent="2" name="top5">
+      <Comment>VIEW</Comment>
+    </view>
+    <routine id="22" parent="2" name="AddToCart">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="23" parent="2" name="TopProducts">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="24" parent="8" name="CategoryName">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="25" parent="8" name="PRIMARY">
+      <ColNames>CategoryName</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="26" parent="8" name="categories_ibfk_1">
+      <ColNames>CategoryName</ColNames>
+      <RefSchemaName>webshop</RefSchemaName>
+      <RefTableName>productcategories</RefTableName>
+      <RefColNames>CategoryName</RefColNames>
+    </foreign-key>
+    <column id="27" parent="9" name="CustomerID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="9" name="FirstName">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="29" parent="9" name="LastName">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="30" parent="9" name="City">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <key id="31" parent="9" name="PRIMARY">
+      <ColNames>CustomerID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="10" name="ProductID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="10" name="Amount">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="34" parent="10" name="PRIMARY">
+      <ColNames>ProductID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="35" parent="10" name="instock_ibfk_1">
+      <ColNames>ProductID</ColNames>
+      <RefSchemaName>webshop</RefSchemaName>
+      <RefTableName>products</RefTableName>
+      <RefColNames>ProductID</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <trigger id="36" parent="10" name="StockEmpty">
+      <Turn>after-row</Turn>
+      <Events>U</Events>
+    </trigger>
+    <column id="37" parent="11" name="OrderID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="38" parent="11" name="CustomerID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="39" parent="11" name="OrderDate">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="40" parent="11" name="CustomerID">
+      <ColNames>CustomerID</ColNames>
+    </index>
+    <key id="41" parent="11" name="PRIMARY">
+      <ColNames>OrderID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="42" parent="11" name="orderrows_ibfk_1">
+      <ColNames>CustomerID</ColNames>
+      <RefSchemaName>webshop</RefSchemaName>
+      <RefTableName>customers</RefTableName>
+      <RefColNames>CustomerID</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="43" parent="12" name="ProductID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="12" name="OutDate">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="45" parent="12" name="PRIMARY">
+      <ColNames>ProductID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="46" parent="12" name="outofstock_ibfk_1">
+      <ColNames>ProductID</ColNames>
+      <RefSchemaName>webshop</RefSchemaName>
+      <RefTableName>products</RefTableName>
+      <RefColNames>ProductID</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="47" parent="13" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="48" parent="13" name="CategoryName">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="49" parent="13" name="CategoryName">
+      <ColNames>CategoryName</ColNames>
+    </index>
+    <key id="50" parent="13" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="51" parent="14" name="OrderID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="14" name="ProductID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="14" name="Amount">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <index id="54" parent="14" name="OrderID">
+      <ColNames>OrderID</ColNames>
+    </index>
+    <key id="55" parent="14" name="PRIMARY">
+      <ColNames>ProductID
+OrderID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="56" parent="14" name="productorders_ibfk_1">
+      <ColNames>OrderID</ColNames>
+      <RefSchemaName>webshop</RefSchemaName>
+      <RefTableName>orderrows</RefTableName>
+      <RefColNames>OrderID</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <foreign-key id="57" parent="14" name="productorders_ibfk_2">
+      <ColNames>ProductID</ColNames>
+      <RefSchemaName>webshop</RefSchemaName>
+      <RefTableName>products</RefTableName>
+      <RefColNames>ProductID</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="58" parent="15" name="ProductID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="59" parent="15" name="ProductCategoryID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="60" parent="15" name="ProductName">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="61" parent="15" name="Brand">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="62" parent="15" name="Size">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="63" parent="15" name="Color">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="64" parent="15" name="Price">
+      <Position>7</Position>
+      <DataType>decimal(8,2)|0</DataType>
+    </column>
+    <index id="65" parent="15" name="ProductCategoryID">
+      <ColNames>ProductCategoryID</ColNames>
+    </index>
+    <key id="66" parent="15" name="PRIMARY">
+      <ColNames>ProductID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="67" parent="15" name="products_ibfk_1">
+      <ColNames>ProductCategoryID</ColNames>
+      <RefSchemaName>webshop</RefSchemaName>
+      <RefTableName>productcategories</RefTableName>
+      <RefColNames>ID</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="68" parent="16" name="Month">
+      <Position>1</Position>
+      <DataType>varchar(37)|0</DataType>
+    </column>
+    <column id="69" parent="16" name="TotalAmount">
+      <Position>2</Position>
+      <DataType>decimal(40,2)|0</DataType>
+    </column>
+    <column id="70" parent="17" name="Customer">
+      <Position>1</Position>
+      <DataType>varchar(101)|0</DataType>
+    </column>
+    <column id="71" parent="18" name="Customer">
+      <Position>1</Position>
+      <DataType>varchar(101)|0</DataType>
+    </column>
+    <column id="72" parent="18" name="TotalAmount">
+      <Position>2</Position>
+      <DataType>decimal(40,2)|0</DataType>
+    </column>
+    <column id="73" parent="19" name="City">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="74" parent="19" name="TotalAmount">
+      <Position>2</Position>
+      <DataType>decimal(40,2)|0</DataType>
+    </column>
+    <column id="75" parent="20" name="CategoryName">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="76" parent="20" name="Products">
+      <Position>2</Position>
+      <DataType>bigint(21)|0</DataType>
+    </column>
+    <column id="77" parent="21" name="ProductID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="21" name="ProductName">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="79" parent="21" name="Brand">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="80" parent="21" name="TimesSold">
+      <Position>4</Position>
+      <DataType>decimal(32)|0</DataType>
+    </column>
+    <argument id="81" parent="22" name="CustomerNumber">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="82" parent="22" name="ProductNumber">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="83" parent="22" name="OrderNumber">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="84" parent="23" name="StartingDate">
+      <DataType>datetime|0</DataType>
+    </argument>
+    <argument id="85" parent="23" name="EndingDate">
+      <DataType>datetime|0</DataType>
+    </argument>
+    <argument id="86" parent="23" name="ListAmount">
+      <DataType>int(11)|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
