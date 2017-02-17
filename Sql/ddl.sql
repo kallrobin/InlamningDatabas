@@ -21,34 +21,32 @@ CREATE TABLE OrderRows (
         ON DELETE CASCADE
 );
 
-CREATE TABLE ProductCategories (
-    ID           INT AUTO_INCREMENT,
-    CategoryName VARCHAR(50),
-    KEY (CategoryName),
-    PRIMARY KEY (ID)
-);
-
 CREATE TABLE Categories (
+    CategoryID INT AUTO_INCREMENT,
     CategoryName VARCHAR(50),
-    PRIMARY KEY (CategoryName),
-    FOREIGN KEY (CategoryName) REFERENCES ProductCategories (CategoryName)
+    PRIMARY KEY (CategoryID)
 );
 
 CREATE TABLE Products (
     ProductID         INT AUTO_INCREMENT,
-    ProductCategoryID INT,
     ProductName       VARCHAR(50),
     Brand             VARCHAR(50),
     Size              INT,
     Color             VARCHAR(50),
     Price             DECIMAL(8, 2),
-    PRIMARY KEY (ProductID),
-    FOREIGN KEY (ProductCategoryID) REFERENCES ProductCategories (ID)
-        ON DELETE CASCADE
+    PRIMARY KEY (ProductID)
+    );
+
+CREATE TABLE ProductCategories (
+    CategoryID           INT,
+    ProductID              INT,
+    PRIMARY KEY (CategoryID, ProductID),
+    FOREIGN KEY (CategoryID) REFERENCES Categories (CategoryID),
+    FOREIGN KEY (ProductID) REFERENCES Products (ProductID)
 );
 
 CREATE TABLE ProductOrders (
-    OrderID   INT,
+OrderID   INT,
     ProductID INT,
     Amount    INT DEFAULT 1,
     PRIMARY KEY (ProductID, OrderID),
@@ -91,45 +89,66 @@ INSERT INTO Customers (FirstName, LastName, City)
 VALUES ('Pierre', 'Poetatis', 'Stockholm');
 
 -- Insert Categories
-INSERT INTO ProductCategories (CategoryName)
+INSERT INTO Categories (CategoryName)
 VALUES ('Pants');
 
-INSERT INTO ProductCategories (CategoryName)
+INSERT INTO Categories (CategoryName)
 VALUES ('Shoes');
 
-INSERT INTO ProductCategories (CategoryName)
+INSERT INTO Categories (CategoryName)
 VALUES ('Tops');
 
-INSERT INTO ProductCategories (CategoryName)
+INSERT INTO Categories (CategoryName)
 VALUES ('Accessories');
 
-INSERT INTO ProductCategories (CategoryName)
+INSERT INTO Categories (CategoryName)
 VALUES ('Jackets');
 
 -- Insert Products
-INSERT INTO Products (ProductCategoryID, ProductName, Brand, Size, Color, Price)
-VALUES (1, 'Jeans', 'Nudie', 32, 'Blue', 899.95);
 
-INSERT INTO Products (ProductCategoryID, ProductName, Brand, Size, Color, Price)
-VALUES (1, 'Jeans', 'Levi', 40, 'Black', 1249);
+INSERT INTO Products (ProductName, Brand, Size, Color, Price)
+VALUES ('Jeans', 'Nudie', 32, 'Blue', 899.95);
+INSERT INTO ProductCategories (CategoryID, ProductID)
+VALUES (1,LAST_INSERT_ID());
 
-INSERT INTO Products (ProductCategoryID, ProductName, Brand, Size, Color, Price)
-VALUES (2, 'High-Tops', 'Volcom', 42, 'Orange', 1898.98);
+INSERT INTO Products (ProductName, Brand, Size, Color, Price)
+VALUES ( 'Pants', 'Levi', 40, 'Black', 1249);
+INSERT INTO ProductCategories (CategoryID, ProductID)
+VALUES (1,LAST_INSERT_ID());
 
-INSERT INTO Products (ProductCategoryID, ProductName, Brand, Size, Color, Price)
-VALUES (2, 'Sneaker', 'Nike', 38, 'White', 1299.99);
+INSERT INTO Products (ProductName, Brand, Size, Color, Price)
+VALUES ('High-Tops', 'Volcom', 42, 'Orange', 1898.98);
+INSERT INTO ProductCategories (CategoryID, ProductID)
+VALUES (2,LAST_INSERT_ID());
 
-INSERT INTO Products (ProductCategoryID, ProductName, Brand, Size, Color, Price)
-VALUES (3, 'Shirt', 'Adidctus', 30, 'Grey', 799.99);
+INSERT INTO Products (ProductName, Brand, Size, Color, Price)
+VALUES ('Sneaker', 'Nike', 38, 'White', 1299.99);
+INSERT INTO ProductCategories (CategoryID, ProductID)
+VALUES (2,LAST_INSERT_ID());
 
-INSERT INTO Products (ProductCategoryID, ProductName, Brand, Size, Color, Price)
-VALUES (4, 'Belt', 'Adidas', 30, 'Blue', 299.99);
+INSERT INTO Products (ProductName, Brand, Size, Color, Price)
+VALUES ('Shirt', 'Adidctus', 30, 'Grey', 799.99);
+INSERT INTO ProductCategories (CategoryID, ProductID)
+VALUES (3,LAST_INSERT_ID());
 
-INSERT INTO Products (ProductCategoryID, ProductName, Brand, Size, Color, Price)
-VALUES (4, 'Bracelet', 'Safira', 4, 'Gold', 5499.50);
 
-INSERT INTO Products (ProductCategoryID, ProductName, Brand, Size, Color, Price)
-VALUES (5, 'Bomber', 'SQRTN', 40, 'Black', 999.98);
+INSERT INTO Products (ProductName, Brand, Size, Color, Price)
+VALUES ('Belt', 'Adidas', 30, 'Blue', 299.99);
+INSERT INTO ProductCategories (CategoryID, ProductID)
+VALUES (4,LAST_INSERT_ID());
+
+
+INSERT INTO Products (ProductName, Brand, Size, Color, Price)
+VALUES ('Bracelet', 'Safira', 4, 'Gold', 5499.50);
+INSERT INTO ProductCategories (CategoryID, ProductID)
+VALUES (4,LAST_INSERT_ID());
+
+
+INSERT INTO Products (ProductName, Brand, Size, Color, Price)
+VALUES ('Bomber', 'SQRTN', 40, 'Black', 999.98);
+INSERT INTO ProductCategories (CategoryID, ProductID)
+VALUES (5,LAST_INSERT_ID());
+
 
 
 -- Insert Orders

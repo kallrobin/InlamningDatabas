@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Uppgift1-6:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Uppgift1_6_jar</output-path>
+    <root id="archive" name="Uppgift1-6.jar">
+      <element id="module-output" name="Uppgift1-6" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar" path-in-jar="/" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar" />
+    </root>
+  </artifact>
+</component>

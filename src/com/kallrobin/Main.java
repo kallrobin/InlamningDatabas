@@ -34,8 +34,8 @@ public class Main {
                         rs = stm.executeQuery();
 
                         while (rs.next()) {
-                            String category = rs.getString("CategoryName");
-                            int ammount = rs.getInt("Products");
+                            String category = rs.getString("Category");
+                            int ammount = rs.getInt("Count");
 
                             System.out.println(ammount + " produter av kategorin " + category);
                         }
@@ -63,7 +63,7 @@ public class Main {
                             String customer = rs.getString("Customer");
                             double ammount = rs.getDouble("TotalAmount");
 
-                            System.out.println(customer + " har köppt för " + ammount);
+                            System.out.println(customer + " har köpt för " + ammount);
                         }
                         break;
                     case 3:
@@ -124,12 +124,12 @@ public class Main {
                         }
                         break;
                     case 5:
-                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
-                        System.out.println("Skriv in Startdatum ÅÅÅÅ-MM-DD HH:MM:SS");
+                        System.out.println("Skriv in Startdatum ÅÅÅÅ-MM-DD");
                         java.util.Date utilStartDate = format.parse(sc.nextLine());
                         java.sql.Date start = new java.sql.Date(utilStartDate.getTime());
-                        System.out.println("Skriv in Slutdatum ÅÅÅÅ-MM-DD HH:MM:SS");
+                        System.out.println("Skriv in Slutdatum ÅÅÅÅ-MM-DD");
                         java.util.Date utilEndDate = format.parse(sc.nextLine());
                         java.sql.Date end = new java.sql.Date(utilEndDate.getTime());
                         System.out.println("Skriv in Antal att lista");

@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Uppgift1-6:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b6bfebc3-d2bf-4487-88a3-7c1dad6f4750" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Uppgift1_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/03473b44-4a1d-4750-9ce1-d6068094ae15/_src_/schema/webshop.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/03473b44-4a1d-4750-9ce1-d6068094ae15/_src_/schema/webshop.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Uppgift1-6/com/kallrobin/Main.class" afterPath="$PROJECT_DIR$/out/production/Uppgift1-6/com/kallrobin/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/03473b44-4a1d-4750-9ce1-d6068094ae15.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/03473b44-4a1d-4750-9ce1-d6068094ae15.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sql/ddl.sql" afterPath="$PROJECT_DIR$/Sql/ddl.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sql/dml.sql" afterPath="$PROJECT_DIR$/Sql/dml.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kallrobin/Main.java" afterPath="$PROJECT_DIR$/src/com/kallrobin/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,10 +108,28 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/kallrobin/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="291">
+              <caret line="37" column="58" lean-forward="false" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1487279776164" expanded="true" signature="1325:1358" ph="SELECT * FRO... ProductsPerCategory" />
+                <marker date="1487279776164" expanded="true" signature="2124:2155" ph="SELECT * FRO... customerorderlist" />
+                <marker date="1487279776164" expanded="true" signature="2249:2494" ph="SELECT Custo... customerorderlist" />
+                <marker date="1487279776164" expanded="true" signature="3158:3205" ph="SELECT * FRO... Products" />
+                <marker date="1487279776164" expanded="true" signature="4065:4746" ph="SELECT (SELE... orderrows" />
+                <marker date="1487279776164" expanded="true" signature="4114:4148" ph="SELECT date_... " />
+                <marker date="1487279776164" expanded="true" signature="4202:4236" ph="SELECT date_... " />
+                <marker date="1487279776164" expanded="true" signature="4289:4338" ph="SELECT SUM(p... " />
+                <marker date="1487279776164" expanded="true" signature="4842:5580" ph="SELECT (SELE... orderrows" />
+                <marker date="1487279776164" expanded="true" signature="4891:4925" ph="SELECT date_... " />
+                <marker date="1487279776164" expanded="true" signature="4979:5013" ph="SELECT date_... " />
+                <marker date="1487279776164" expanded="true" signature="5066:5115" ph="SELECT SUM(p... " />
+                <marker date="1487279776164" expanded="true" signature="6929:6952" ph="CALL TopProd... " />
+                <marker date="1487279776164" expanded="true" signature="7967:8052" ph="SELECT Produ... products" />
+                <marker date="1487279776164" expanded="true" signature="9290:9362" ph="SELECT Custo... Customers" />
+                <marker date="1487279776164" expanded="true" signature="10396:10736" ph="SELECT custo... orderrows" />
+                <marker date="1487279776164" expanded="true" signature="11850:11874" ph="CALL AddToCa... " />
+                <marker date="1487279776164" expanded="true" signature="12076:12097" ph="CALL AddToCa... " />
               </folding>
             </state>
           </provider>
@@ -119,21 +150,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ddl.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ddl.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sql/ddl.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="138" column="32" lean-forward="true" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
+            <state relative-caret-position="130">
+              <caret line="104" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dml.sql" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dml.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sql/dml.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="138" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="138" selection-end-column="15" />
+            <state relative-caret-position="187">
+              <caret line="11" column="66" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="137" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -205,7 +236,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1932" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -224,8 +255,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -235,6 +264,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Uppgift1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Uppgift1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Uppgift1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -270,9 +313,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Uppgift1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Uppgift1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,7 +340,7 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
@@ -690,14 +749,15 @@
       <updated>1487174354802</updated>
       <workItem from="1487174356279" duration="19059000" />
       <workItem from="1487230923147" duration="1268000" />
+      <workItem from="1487257645282" duration="6066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20327000" />
+    <option name="totallyTimeSpent" value="26393000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -709,15 +769,15 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16858038" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17797495" sideWeight="0.4873817" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2328125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35386223" sideWeight="0.4873817" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -752,10 +812,108 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/kallrobin/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1487279776164" expanded="true" signature="1325:1358" ph="SELECT * FRO... ProductsPerCategory" />
+            <marker date="1487279776164" expanded="true" signature="2124:2155" ph="SELECT * FRO... customerorderlist" />
+            <marker date="1487279776164" expanded="true" signature="2249:2494" ph="SELECT Custo... customerorderlist" />
+            <marker date="1487279776164" expanded="true" signature="3158:3205" ph="SELECT * FRO... Products" />
+            <marker date="1487279776164" expanded="true" signature="4065:4746" ph="SELECT (SELE... orderrows" />
+            <marker date="1487279776164" expanded="true" signature="4114:4148" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="4202:4236" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="4289:4338" ph="SELECT SUM(p... " />
+            <marker date="1487279776164" expanded="true" signature="4842:5580" ph="SELECT (SELE... orderrows" />
+            <marker date="1487279776164" expanded="true" signature="4891:4925" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="4979:5013" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="5066:5115" ph="SELECT SUM(p... " />
+            <marker date="1487279776164" expanded="true" signature="6929:6952" ph="CALL TopProd... " />
+            <marker date="1487279776164" expanded="true" signature="7967:8052" ph="SELECT Produ... products" />
+            <marker date="1487279776164" expanded="true" signature="9290:9362" ph="SELECT Custo... Customers" />
+            <marker date="1487279776164" expanded="true" signature="10396:10736" ph="SELECT custo... orderrows" />
+            <marker date="1487279776164" expanded="true" signature="11850:11874" ph="CALL AddToCa... " />
+            <marker date="1487279776164" expanded="true" signature="12076:12097" ph="CALL AddToCa... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/da49903/03473b44-4a1d-4750-9ce1-d6068094ae15/webshop.orderrows">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sql/ddl.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sql/dml.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="138" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="138" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/03473b44-4a1d-4750-9ce1-d6068094ae15/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1487231332666" expanded="true" signature="697:877" ph="SELECT Order... orderrows" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/da49903/03473b44-4a1d-4750-9ce1-d6068094ae15/webshop.products">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kallrobin/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1487279776164" expanded="true" signature="1325:1358" ph="SELECT * FRO... ProductsPerCategory" />
+            <marker date="1487279776164" expanded="true" signature="2124:2155" ph="SELECT * FRO... customerorderlist" />
+            <marker date="1487279776164" expanded="true" signature="2249:2494" ph="SELECT Custo... customerorderlist" />
+            <marker date="1487279776164" expanded="true" signature="3158:3205" ph="SELECT * FRO... Products" />
+            <marker date="1487279776164" expanded="true" signature="4065:4746" ph="SELECT (SELE... orderrows" />
+            <marker date="1487279776164" expanded="true" signature="4114:4148" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="4202:4236" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="4289:4338" ph="SELECT SUM(p... " />
+            <marker date="1487279776164" expanded="true" signature="4842:5580" ph="SELECT (SELE... orderrows" />
+            <marker date="1487279776164" expanded="true" signature="4891:4925" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="4979:5013" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="5066:5115" ph="SELECT SUM(p... " />
+            <marker date="1487279776164" expanded="true" signature="6929:6952" ph="CALL TopProd... " />
+            <marker date="1487279776164" expanded="true" signature="7967:8052" ph="SELECT Produ... products" />
+            <marker date="1487279776164" expanded="true" signature="9290:9362" ph="SELECT Custo... Customers" />
+            <marker date="1487279776164" expanded="true" signature="10396:10736" ph="SELECT custo... orderrows" />
+            <marker date="1487279776164" expanded="true" signature="11850:11874" ph="CALL AddToCa... " />
+            <marker date="1487279776164" expanded="true" signature="12076:12097" ph="CALL AddToCa... " />
           </folding>
         </state>
       </provider>
@@ -808,7 +966,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -817,19 +974,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kallrobin/Operations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kallrobin/Operations.java" />
     <entry file="dbSrc:///da49903/03473b44-4a1d-4750-9ce1-d6068094ae15/schema/webshop/view/productspercategory.sql">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -944,14 +1093,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kallrobin/Operations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kallrobin/Operations.java" />
     <entry file="jar://$USER_HOME$/Downloads/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar!/com/mysql/jdbc/ConnectionImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -963,7 +1105,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -983,7 +1124,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1028,28 +1168,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sql/dml.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="138" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="138" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kallrobin/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="291">
+          <caret line="37" column="58" lean-forward="false" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1487279776164" expanded="true" signature="1325:1358" ph="SELECT * FRO... ProductsPerCategory" />
+            <marker date="1487279776164" expanded="true" signature="2124:2155" ph="SELECT * FRO... customerorderlist" />
+            <marker date="1487279776164" expanded="true" signature="2249:2494" ph="SELECT Custo... customerorderlist" />
+            <marker date="1487279776164" expanded="true" signature="3158:3205" ph="SELECT * FRO... Products" />
+            <marker date="1487279776164" expanded="true" signature="4065:4746" ph="SELECT (SELE... orderrows" />
+            <marker date="1487279776164" expanded="true" signature="4114:4148" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="4202:4236" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="4289:4338" ph="SELECT SUM(p... " />
+            <marker date="1487279776164" expanded="true" signature="4842:5580" ph="SELECT (SELE... orderrows" />
+            <marker date="1487279776164" expanded="true" signature="4891:4925" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="4979:5013" ph="SELECT date_... " />
+            <marker date="1487279776164" expanded="true" signature="5066:5115" ph="SELECT SUM(p... " />
+            <marker date="1487279776164" expanded="true" signature="6929:6952" ph="CALL TopProd... " />
+            <marker date="1487279776164" expanded="true" signature="7967:8052" ph="SELECT Produ... products" />
+            <marker date="1487279776164" expanded="true" signature="9290:9362" ph="SELECT Custo... Customers" />
+            <marker date="1487279776164" expanded="true" signature="10396:10736" ph="SELECT custo... orderrows" />
+            <marker date="1487279776164" expanded="true" signature="11850:11874" ph="CALL AddToCa... " />
+            <marker date="1487279776164" expanded="true" signature="12076:12097" ph="CALL AddToCa... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sql/ddl.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="138" column="32" lean-forward="true" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
+        <state relative-caret-position="130">
+          <caret line="104" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sql/dml.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="66" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="137" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -1060,10 +1218,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>Uppgift1-6:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

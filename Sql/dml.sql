@@ -4,13 +4,12 @@ USE webshop;
 DROP VIEW IF EXISTS ProductsPerCategory;
 CREATE VIEW ProductsPerCategory
 AS
-    SELECT
-        CategoryName,
-        (SELECT COUNT(ProductID)
-         FROM products
-         WHERE ProductCategoryID = productcategories.ID) AS Products
-    FROM productcategories;
-
+    SELECT categories.CategoryName AS Category,
+           COUNT(products.ProductID) AS 'Count'
+    FROM categories
+        INNER JOIN productcategories ON categories.CategoryID = productcategories.CategoryID
+        INNER JOIN Products ON ProductCategories.ProductID = Products.ProductID
+    GROUP BY CategoryName ORDER BY Count(products.ProductID) DESC;
 -- 2.Skapa en kundlista med det totala ordervärdet kunden har beställt för. [Kundens för- och efernamn, samt det totala ordervärdet skall visas]
 
 DROP VIEW IF EXISTS CustomerOrderList;

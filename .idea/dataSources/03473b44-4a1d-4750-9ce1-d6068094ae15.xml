@@ -44,20 +44,19 @@
       <RoutineKind>procedure</RoutineKind>
     </routine>
     <column id="24" parent="8" name="CategoryName">
-      <Position>1</Position>
+      <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <key id="25" parent="8" name="PRIMARY">
-      <ColNames>CategoryName</ColNames>
+    <column id="25" parent="8" name="CategoryID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <key id="26" parent="8" name="PRIMARY">
+      <ColNames>CategoryID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="26" parent="8" name="categories_ibfk_1">
-      <ColNames>CategoryName</ColNames>
-      <RefSchemaName>webshop</RefSchemaName>
-      <RefTableName>productcategories</RefTableName>
-      <RefColNames>CategoryName</RefColNames>
-    </foreign-key>
     <column id="27" parent="9" name="CustomerID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
@@ -153,173 +152,173 @@
       <RefColNames>ProductID</RefColNames>
       <OnDelete>delete</OnDelete>
     </foreign-key>
-    <column id="47" parent="13" name="ID">
+    <column id="47" parent="13" name="CategoryID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="48" parent="13" name="CategoryName">
+    <column id="48" parent="13" name="ProductID">
       <Position>2</Position>
-      <DataType>varchar(50)|0</DataType>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <index id="49" parent="13" name="CategoryName">
-      <ColNames>CategoryName</ColNames>
+    <index id="49" parent="13" name="ProductID">
+      <ColNames>ProductID</ColNames>
     </index>
     <key id="50" parent="13" name="PRIMARY">
-      <ColNames>ID</ColNames>
+      <ColNames>CategoryID
+ProductID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="51" parent="14" name="OrderID">
+    <foreign-key id="51" parent="13" name="productcategories_ibfk_1">
+      <ColNames>CategoryID</ColNames>
+      <RefSchemaName>webshop</RefSchemaName>
+      <RefTableName>categories</RefTableName>
+      <RefColNames>CategoryID</RefColNames>
+    </foreign-key>
+    <foreign-key id="52" parent="13" name="productcategories_ibfk_2">
+      <ColNames>ProductID</ColNames>
+      <RefSchemaName>webshop</RefSchemaName>
+      <RefTableName>products</RefTableName>
+      <RefColNames>ProductID</RefColNames>
+    </foreign-key>
+    <column id="53" parent="14" name="OrderID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="14" name="ProductID">
+    <column id="54" parent="14" name="ProductID">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="14" name="Amount">
+    <column id="55" parent="14" name="Amount">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
     </column>
-    <index id="54" parent="14" name="OrderID">
+    <index id="56" parent="14" name="OrderID">
       <ColNames>OrderID</ColNames>
     </index>
-    <key id="55" parent="14" name="PRIMARY">
+    <key id="57" parent="14" name="PRIMARY">
       <ColNames>ProductID
 OrderID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="56" parent="14" name="productorders_ibfk_1">
+    <foreign-key id="58" parent="14" name="productorders_ibfk_1">
       <ColNames>OrderID</ColNames>
       <RefSchemaName>webshop</RefSchemaName>
       <RefTableName>orderrows</RefTableName>
       <RefColNames>OrderID</RefColNames>
       <OnDelete>delete</OnDelete>
     </foreign-key>
-    <foreign-key id="57" parent="14" name="productorders_ibfk_2">
+    <foreign-key id="59" parent="14" name="productorders_ibfk_2">
       <ColNames>ProductID</ColNames>
       <RefSchemaName>webshop</RefSchemaName>
       <RefTableName>products</RefTableName>
       <RefColNames>ProductID</RefColNames>
       <OnDelete>delete</OnDelete>
     </foreign-key>
-    <column id="58" parent="15" name="ProductID">
+    <column id="60" parent="15" name="ProductID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="59" parent="15" name="ProductCategoryID">
+    <column id="61" parent="15" name="ProductName">
       <Position>2</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="60" parent="15" name="ProductName">
+    <column id="62" parent="15" name="Brand">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="61" parent="15" name="Brand">
+    <column id="63" parent="15" name="Size">
       <Position>4</Position>
-      <DataType>varchar(50)|0</DataType>
-    </column>
-    <column id="62" parent="15" name="Size">
-      <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="63" parent="15" name="Color">
-      <Position>6</Position>
+    <column id="64" parent="15" name="Color">
+      <Position>5</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="64" parent="15" name="Price">
-      <Position>7</Position>
+    <column id="65" parent="15" name="Price">
+      <Position>6</Position>
       <DataType>decimal(8,2)|0</DataType>
     </column>
-    <index id="65" parent="15" name="ProductCategoryID">
-      <ColNames>ProductCategoryID</ColNames>
-    </index>
     <key id="66" parent="15" name="PRIMARY">
       <ColNames>ProductID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="67" parent="15" name="products_ibfk_1">
-      <ColNames>ProductCategoryID</ColNames>
-      <RefSchemaName>webshop</RefSchemaName>
-      <RefTableName>productcategories</RefTableName>
-      <RefColNames>ID</RefColNames>
-      <OnDelete>delete</OnDelete>
-    </foreign-key>
-    <column id="68" parent="16" name="Month">
+    <column id="67" parent="16" name="Month">
       <Position>1</Position>
       <DataType>varchar(37)|0</DataType>
     </column>
-    <column id="69" parent="16" name="TotalAmount">
+    <column id="68" parent="16" name="TotalAmount">
       <Position>2</Position>
       <DataType>decimal(40,2)|0</DataType>
     </column>
-    <column id="70" parent="17" name="Customer">
+    <column id="69" parent="17" name="Customer">
       <Position>1</Position>
       <DataType>varchar(101)|0</DataType>
     </column>
-    <column id="71" parent="18" name="Customer">
+    <column id="70" parent="18" name="Customer">
       <Position>1</Position>
       <DataType>varchar(101)|0</DataType>
     </column>
-    <column id="72" parent="18" name="TotalAmount">
+    <column id="71" parent="18" name="TotalAmount">
       <Position>2</Position>
       <DataType>decimal(40,2)|0</DataType>
     </column>
-    <column id="73" parent="19" name="City">
+    <column id="72" parent="19" name="City">
       <Position>1</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="74" parent="19" name="TotalAmount">
+    <column id="73" parent="19" name="TotalAmount">
       <Position>2</Position>
       <DataType>decimal(40,2)|0</DataType>
     </column>
-    <column id="75" parent="20" name="CategoryName">
+    <column id="74" parent="20" name="Category">
       <Position>1</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="76" parent="20" name="Products">
+    <column id="75" parent="20" name="Count">
       <Position>2</Position>
       <DataType>bigint(21)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="77" parent="21" name="ProductID">
+    <column id="76" parent="21" name="ProductID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="78" parent="21" name="ProductName">
+    <column id="77" parent="21" name="ProductName">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="79" parent="21" name="Brand">
+    <column id="78" parent="21" name="Brand">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="80" parent="21" name="TimesSold">
+    <column id="79" parent="21" name="TimesSold">
       <Position>4</Position>
       <DataType>decimal(32)|0</DataType>
     </column>
-    <argument id="81" parent="22" name="CustomerNumber">
+    <argument id="80" parent="22" name="CustomerNumber">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="82" parent="22" name="ProductNumber">
+    <argument id="81" parent="22" name="ProductNumber">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="83" parent="22" name="OrderNumber">
+    <argument id="82" parent="22" name="OrderNumber">
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="84" parent="23" name="StartingDate">
+    <argument id="83" parent="23" name="StartingDate">
       <DataType>datetime|0</DataType>
     </argument>
-    <argument id="85" parent="23" name="EndingDate">
+    <argument id="84" parent="23" name="EndingDate">
       <DataType>datetime|0</DataType>
     </argument>
-    <argument id="86" parent="23" name="ListAmount">
+    <argument id="85" parent="23" name="ListAmount">
       <DataType>int(11)|0</DataType>
     </argument>
   </database-model>
